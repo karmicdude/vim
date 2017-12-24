@@ -8,7 +8,7 @@ git clone https://github.com/z-engine/vim.git ~/.vim
 #git clone git@github.com:z-engine/vim.git ~/.vim
 
 # Delete default global vimrc config (as root or sudo)
-rm -rf /etc/vim*
+sudo rm -rf /etc/vim*
 
 # Create symlink
 sudo ln -s ~/.vim /etc/vim
