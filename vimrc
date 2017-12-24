@@ -10,10 +10,10 @@ set rtp+=/etc/vim/bundle/Vundle.vim
 call vundle#begin('/etc/vim/plugins/vundle')
 
 " Appearance
-Plugin 'morhetz/gruvbox'                " Colorscheme
+Plugin 'morhetz/gruvbox'                    " Colorscheme
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
-Plugin 'Yggdroot/indentLine'            " Display vertical lines for each indentation
+Plugin 'Yggdroot/indentLine'                " Display vertical lines for each indentation
 
 "Syntax highlighting
 Plugin 'Absolight/vim-bind'
@@ -23,76 +23,76 @@ Plugin 'tpope/vim-markdown'
 Plugin 'vim-scripts/dhcpd.vim'
 Plugin 'ekalinin/Dockerfile.vim'
 
-Plugin 'Shougo/neocomplete.vim'         " Vim completion
-Plugin 'chilicuil/vim-sprunge'          " Pastebin service
-Plugin 'easymotion/vim-easymotion'      " Easymotion navigation for vim
-Plugin 'mhinz/vim-startify'             " Start screen for vim
-Plugin 'scrooloose/nerdtree'            " Sidebar for vim
-Plugin 'tpope/vim-surround'             " Vim text wrapper
-Plugin 'vim-scripts/indentpython.vim'   " Python PEP8 indentation
-Plugin 'vim-syntastic/syntastic'        " Vim syntax checking plugin
+Plugin 'Shougo/neocomplete.vim'             " Vim completion
+Plugin 'chilicuil/vim-sprunge'              " Pastebin service
+Plugin 'easymotion/vim-easymotion'          " Easymotion navigation for vim
+Plugin 'mhinz/vim-startify'                 " Start screen for vim
+Plugin 'scrooloose/nerdtree'                " Sidebar for vim
+Plugin 'tpope/vim-surround'                 " Vim text wrapper
+Plugin 'vim-scripts/indentpython.vim'       " Python PEP8 indentation
+Plugin 'vim-syntastic/syntastic'            " Vim syntax checking plugin
 
 call vundle#end()
 filetype plugin indent on
 
 """ General """
-autocmd BufEnter * set mouse=		        " Disalbe mouse
-set encoding=utf8			                  " Default encoding
-set history=1000			                  " Long commands history
-set autoread                    	      " Auto reRead file if it changed outside of vim
+autocmd BufEnter * set mouse=               " Disalbe mouse
+set encoding=utf8                           " Default encoding
+set history=1000                            " Long commands history
+set autoread                                " Auto reRead file if it changed outside of vim
 "Backups
-set nobackup                    	      " Don't create backup files
-set nowritebackup               	      " Don't create backup files when file directly editing
-set noswapfile                  	      " Don't create swp files
+set nobackup                                " Don't create backup files
+set nowritebackup                           " Don't create backup files when file directly editing
+set noswapfile                              " Don't create swp files
 "Error bells
-set noerrorbells                	      " Don't beeping
-set novisualbell                	      " Don't flashing screen
-set t_vb=                       	      " No terminal code to display the visual bell
+set noerrorbells                            " Don't beeping
+set novisualbell                            " Don't flashing screen
+set t_vb=                                   " No terminal code to display the visual bell
 "Searching
-set gdefault                            " Set default searching mask //g
-set nohlsearch			                    " Don't highlight matched pattern
-set incsearch				                    " Incremental search
-set ignorecase				                  " Case insensitive
-set smartcase				                    " Example: '/test' = 'Test' and 'test', but '/Test' = 'Test' only
+set gdefault                                " Set default searching mask //g
+set nohlsearch                              " Don't highlight matched pattern
+set incsearch                               " Incremental search
+set ignorecase                              " Case insensitive
+set smartcase                               " Example: '/test' = 'Test' and 'test', but '/Test' = 'Test' only
 "Splits
-set splitright                  	      " Split from right side
-set splitbelow                  	      " Split below of current file
+set splitright                              " Split from right side
+set splitbelow                              " Split below of current file
 "Performance
-set lazyredraw                  	      " Avoid slow scrolling problem
-set ttyfast				                      " Indicates a fast terminal connection
+set lazyredraw                              " Avoid slow scrolling problem
+set ttyfast                                 " Indicates a fast terminal connection
 "Identation
-set expandtab                   	      " Replace tabs to spaces
-set tabstop=2                   	      " Number of spaces that a <Tab> in the file counts for.
-set softtabstop=2               	      " Number of spaces that a <Tab> counts for while performing editing operations
-set shiftwidth=2                	      " Number of spaces to use for each step of (auto)indent
-set smarttab                    	      " With expandtab <Backspace> delete ident like a <Tab>
-set autoindent                  	      " Copy indent from current line when starting a new line
-set smartindent                 	      " Do smart autoindenting when starting a new line
-"Line wraping
-set textwidth=0                 	      " Disable max width of text in line
-set wrapmargin=0                	      " Disable wraping near right border
-set wrap                        	      " Break end of line
-set linebreak                   	      " Don't break whole words
+set expandtab                               " Replace tabs to spaces
+set tabstop=2                               " Number of spaces that a <Tab> in the file counts for.
+set softtabstop=2                           " Number of spaces that a <Tab> counts for while performing editing operations
+set shiftwidth=2                            " Number of spaces to use for each step of (auto)indent
+set smarttab                                " With expandtab <Backspace> delete ident like a <Tab>
+set autoindent                              " Copy indent from current line when starting a new line
+set smartindent                             " Do smart autoindenting when starting a new line
+"Line wraping   
+set textwidth=0                             " Disable max width of text in line
+set wrapmargin=0                            " Disable wraping near right border
+set wrap                                    " Break end of line
+set linebreak                               " Don't break whole words
 "Appearance
-syntax enable				                    " Trun on syntax highlighting
+syntax enable                               " Trun on syntax highlighting
 set background=dark
-set t_Co=256				                    " Set number of colors
+set t_Co=256                                " Set number of colors
 let g:rehash256=1
 colorscheme gruvbox
-set cursorline				                  " Highlight current line
-set laststatus=2			                  " Show statusline
-set scrolloff=3				                  " Keep cursor 3 lines away from screen border when scrolling
-set modeline				                    " Enable modeline
+set cursorline                              " Highlight current line
+set laststatus=2                            " Show statusline
+set scrolloff=3                             " Keep cursor 3 lines away from screen border when scrolling
+set modeline                                " Enable modeline
 "Special chars
-set listchars+=tab:▸\ ,trail:¬          " Show special chars when :set list
-set listchars+=extends:+,eol:$
-set listchars+=precedes:+
-"Completion
-set wildmenu                            " Command-line completion operates in an enhanced mode
-set wildmode=longest,list,full          " Completion mode, menu size
-"Motion
-set backspace=indent,eol,start          " Backspace normaly delete over line breaks, auto-indent
-set showmatch                           " Jump with % to a matching opening or closing parenthesis
+set listchars+=tab:▸\ ,trail:¬              " Show special chars when :set list
+set listchars+=extends:+,eol:$  
+set listchars+=precedes:+   
+"Completion 
+set wildmenu                                " Command-line completion operates in an enhanced mode
+set wildmode=longest,list,full              " Completion mode, menu size
+"Motion 
+set backspace=indent,eol,start              " Backspace normaly delete over line breaks, auto-indent
+set showmatch                               " Jump with % to a matching opening or closing parenthesis
 
 
 """ Keybindings """
