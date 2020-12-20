@@ -4,8 +4,8 @@
 
 ```bash
 # Clone repo
-git clone https://github.com/z-engine/vim.git ~/.vim
-#git clone git@github.com:z-engine/vim.git ~/.vim
+git clone https://github.com/karmicdude/vim.git ~/.vim
+#git clone git@github.com:karmicdude/vim.git ~/.vim
 
 # Delete default global vimrc config (as root or sudo)
 sudo rm -rf /etc/vim*
